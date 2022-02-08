@@ -7,7 +7,7 @@ import android.provider.BaseColumns
 
 class TaskDao(private val dbHelper: TaskDbHelper) {
     private val projection = arrayOf(
-        BaseColumns._ID,
+        TaskEntry.ID,
         TaskEntry.COLUMN_NAME_TASK_ID,
         TaskEntry.COLUMN_NAME_PROGRESS,
         TaskEntry.COLUMN_NAME_STATUS,
@@ -235,7 +235,7 @@ class TaskDao(private val dbHelper: TaskDbHelper) {
     }
 
     private fun parseCursor(cursor: Cursor): DownloadTask {
-        val primaryId = cursor.getInt(cursor.getColumnIndexOrThrow(BaseColumns._ID))
+        val primaryId = cursor.getInt(cursor.getColumnIndexOrThrow(TaskEntry.ID))
         val taskId =
             cursor.getString(cursor.getColumnIndexOrThrow(TaskEntry.COLUMN_NAME_TASK_ID))
         val status =

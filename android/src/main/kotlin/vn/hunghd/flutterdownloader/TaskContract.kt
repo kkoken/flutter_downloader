@@ -9,7 +9,7 @@ class TaskEntry : BaseColumns {
         get() = _id.get()
 
     companion object {
-        const val ID = "id"
+        const val ID = "_id"
         const val TABLE_NAME = "task"
         const val COLUMN_NAME_TASK_ID = "task_id"
         const val COLUMN_NAME_STATUS = "status"

@@ -24,7 +24,7 @@ class TaskDbHelper private constructor(context: Context) :
         const val DATABASE_NAME = "download_tasks.db"
         private var instance: TaskDbHelper? = null
         private val SQL_CREATE_ENTRIES = "CREATE TABLE " + TaskEntry.TABLE_NAME.toString() + " (" +
-                TaskEntry.toString() + " INTEGER PRIMARY KEY," +
+                TaskEntry().id.toString() + " INTEGER PRIMARY KEY," +
                 TaskEntry.COLUMN_NAME_TASK_ID.toString() + " VARCHAR(256), " +
                 TaskEntry.COLUMN_NAME_URL.toString() + " TEXT, " +
                 TaskEntry.COLUMN_NAME_STATUS.toString() + " INTEGER DEFAULT 0, " +

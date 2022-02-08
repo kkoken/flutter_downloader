@@ -4,14 +4,14 @@
 
 * Configure `Application`:
 
-Java: 
+Java:
+
 ```java
 // MyApplication.java (create this file if it doesn't exist in your project)
 
 import io.flutter.app.FlutterApplication;
 import io.flutter.plugin.common.PluginRegistry;
 import io.flutter.plugins.GeneratedPluginRegistrant;
-import vn.hunghd.flutterdownloader.FlutterDownloaderPlugin;
 
 public class MyApplication extends FlutterApplication implements PluginRegistry.PluginRegistrantCallback {
     @Override
